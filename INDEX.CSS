@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('IMG/10.jpg'); /* Cambia 'ruta/de/tu/imagen.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 170px; /* Aumentado para acomodar mejor el logo */
+    background-color: rgba(0, 0, 0, 0.8); /* Cambiado a rgba para transparencia */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.header h1 {
+    margin: 0 auto; /* Centrar el título */
+    font-size: 24px;
+}
+
+.header .navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header .navbar ul li {
+    margin-right: 30px; /* Espacio entre las secciones */
+}
+
+.header .navbar ul li a {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header .navbar ul li a:hover {
+    color: rgb(253, 253, 253);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    margin-right: auto; /* Mueve el logo al lado izquierdo */
+}
+
+.menu .navbar ul li {
+    position: relative;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: gray;
+    display: block;
+    font-weight: 600;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 150px;
+    height: 150px;
+    margin-left: 0; /* Pegado al lado izquierdo */
+}
+
+.header-txt {
+    text-align: center;
+}
+
+.header-txt h1 {
+    font-size: 85px;
+    color: aqua;
+}
+
+.general {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.general-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+    gap: 20px; /* Añadido para separar los programas */
+}
+
+.general-1 img, 
+.general-2 img, 
+.general-3 img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover; /* Esto asegura que la imagen cubra todo el espacio disponible */
+    border-radius: 0px; /* Si deseas mantener los bordes redondeados */
+}
+
+h2 {
+    font-size: 70px;
+    text-transform: uppercase;
+    color: rgb(246, 246, 246);
+}
+
+.txt h3 {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.txt p {
+    color: blanchedalmond;
+    font-size: 16px;
+    text-align: center; /* Centrar el texto */
+}
+
+.footer {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Espacio entre las secciones */
+    align-items: center; /* Alinea verticalmente las secciones */
+}
+
+.phone-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Separación del lado izquierdo */
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 3; /* Se asegura de que el contenido se centre adecuadamente */
+    color: #ffffff;
+}
+
+.footer-icons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea el icono al extremo derecho */
+    margin-right: 20px; /* Elimina cualquier margen derecho */
+}
+
+img {
+    width: 55px;
+    height: 55px;
+    margin-left: 10px; /* Espacio entre el icono y el número de teléfono */
+}

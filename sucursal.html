@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="INDEX.CSS">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .header {
+            width: 100%;
+            height: 170px; /* Tamaño del header */
+            background-color: rgba(0, 0, 0, 0.8); /* Color de fondo con transparencia */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0 auto; /* Centrar el título */
+            font-size: 24px;
+        }
+
+        .header .navbar ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .header .navbar ul li {
+            margin-right: 30px; /* Espacio entre las secciones */
+        }
+
+        .header .navbar ul li a {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header .navbar ul li a:hover {
+            color: rgb(253, 253, 253);
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo {
+            margin-right: auto; /* Mueve el logo al lado izquierdo */
+        }
+
+        .menu .navbar ul li {
+            position: relative;
+        }
+
+        .menu .navbar ul li a {
+            font-size: 18px;
+            padding: 20px;
+            color: gray;
+            display: block;
+            font-weight: 600;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        .menu-icono {
+            width: 130px;
+            margin-left: 0; /* Pegado al lado izquierdo */
+        }
+
+        .footer {
+            padding: 30px 0;
+            background-color: rgba(0, 0, 0, 0.8); /* Color de fondo con transparencia */
+            color: white;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px; /* Añadir margen superior para separar del mapa */
+        }
+
+        #mapa {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #34495e;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .map-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 20px 0; /* Añadir espacio arriba y abajo del contenedor del mapa */
+        }
+
+        .address {
+            width: 30%;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .address h3 {
+            margin-top: 0;
+            font-family: 'Anton SC', sans-serif;
+        }
+
+        .address p {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <img src="IMG\Logo.png" class="menu-icono" alt="Los brothers">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="Servicios.html">Nuestros barberos</a></li>
+                <li><a href="Sucursal.html">Sucursal</a></li>
+                <li><a href="login.php">Iniciar sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="map-container">
+            <!-- Contenedor para el mapa -->
+            <div id="mapa"></div>
+            <!-- Sección para la dirección -->
+            <div class="address">
+                <h3>Dirección:</h3>
+                <p>C. Rivera de Ixtapa 351<br>Parcelas Ejido Jesús Carranza,<br>32594 Juárez, Chih.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts al final del body para asegurar que el DOM esté cargado antes de ejecutar los scripts -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('mapa').setView([31.618024028078082, -106.30956107381694], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([31.6894, -106.4194]).addTo(map)
+            .bindPopup('Barber shop "Los Brothers" C. Rivera de Ixtapa 351, Parcelas Ejido Jesús Carranza, 32594 Juárez, Chih.')
+            .openPopup();
+    </script>
+
+<footer class="footer">
+    <div class="phone-section">
+        <img src="IMG\Telefono3-removebg-preview.png" alt="Los brothers">
+          <span class="phone-number">656 100 0356</span>
+    </div>
+
+    <div class="footer-content">
+         <p>&copy; Los brothers shop 2024</p>
+    </div>
+
+    <div class="footer-icons">
+        <a href="https://www.facebook.com/profile.php?id=100089591422119&locale=es_LA">
+          <img title="Facebook Barber Shop-Los Brothers" src="IMG/facebook.png"/>
+       </a>
+    </div>
+
+</footer>
+</body>
+</html>
+

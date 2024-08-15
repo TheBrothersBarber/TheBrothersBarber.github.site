@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="INDEX.CSS">
+ 
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .section-cortes {
+            padding: 40px 0;
+            text-align: center;
+            background-color: #000000;
+            color: #ffffff;
+            border-radius: 15px;
+        }
+
+        .section-cortes h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .card {
+            background-color: #2220208e;
+            border-radius: 0px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: center;
+            color: #000000;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(145, 140, 140, 0.2);
+        }
+
+        .card img {
+            width: 90%;
+            height: 85%;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7em;
+            margin: 10px 0;
+        }
+
+        .card-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            color: #ffffff;
+        }
+
+        .step {
+            width: 30%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .step h3 {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+        }
+
+        .step-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #fffdfd;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <img src="IMG\Logo.png" class="menu-icono" alt="Los brothers">
+        </div>          
+        <nav class="navbar">
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="Servicios.html">Nuestros barberos</a></li>
+                <li><a href="Sucursal.html">Sucursal</a></li>
+                <li><a href="login.php">Iniciar sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="container">
+    <section class="section-cortes">
+        <h2>Nuestros barberos</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="IMG\Luis.jpeg" alt="Corte Clásico">
+                <div class="card-content">
+                    <h3 class="card-title">Luis</h3>
+                </div>
+            </div>
+            <div class="card">
+                <img src="IMG\Eduardo.jpeg" alt="Corte Moderno">
+                <div class="card-content">
+                    <h3 class="card-title">Eduardo</h3>
+                </div>
+            </div>
+            <div class="card">
+                <img src="IMG\Tencle.jpeg" alt="Corte Degradado">
+                <div class="card-content">
+                    <h3 class="card-title">Tencle</h3>
+                </div>
+            </div>
+            <!-- Añade más tarjetas según sea necesario -->
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="phone-section">
+        <img src="IMG\Telefono3-removebg-preview.png" alt="Los brothers">
+          <span class="phone-number">656 100 0356</span>
+    </div>
+
+    <div class="footer-content">
+         <p>&copy; Los brothers shop 2024</p>
+    </div>
+
+    <div class="footer-icons">
+        <a href="https://www.facebook.com/profile.php?id=100089591422119&locale=es_LA">
+          <img title="Facebook Barber Shop-Los Brothers" src="IMG\facebook.png"/>
+       </a>
+    </div>
+
+</footer>
+
+</body>
+</html>

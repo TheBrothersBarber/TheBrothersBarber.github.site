@@ -1,0 +1,47 @@
+<?php
+session_start();
+require 'C:\xampp\htdocs\BARBERIA\conexion.php';
+
+if (!isset($_SESSION['id_barbero']) || $_SESSION['rol'] !== 'admin') {
+    header('Location: login.php');
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nombre_servicio = $_POST['nombre_servicio'];
+    $precio = $_POST['precio'];
+    $descripcion = $_POST['descripcion'];
+
+    $query = "INSERT INTO Servicios (nombre_servicio, precio, descripcion_servicio) VALUES (?, ?, ?)";
+    $stmt = $conexion->prepare($query);
+    $stmt->bind_param('sss', $nombre_servicio, $precio, $descripcion);
+    $stmt->execute();
+
+    header('Location: dashboard.php');
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Servicio</title>
+</head>
+<body>
+    <h2>Agregar Servicio</h2>
+    <form method="post" action="">
+        <label for="nombre_servicio">Nombre:</label>
+        <input type="text" name="nombre_servicio" required>
+        <br>
+        <label for="precio">Precio:</label>
+        <input type="text" name="precio" required>
+        <br>
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion"></textarea>
+        <br>
+        <button type="submit">Agregar Servicio</button>
+    </form>
+</body>
+</html>
